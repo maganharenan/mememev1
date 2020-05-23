@@ -90,8 +90,10 @@ struct HomeView: View {
                         
                         //Shares memed image
                         Button(action: {
-                            self.closeAllPopUps()
-                            self.generateMeme()
+                            if self.homeVM.webImage != "" || self.homeVM.selectedImage != UIImage() {
+                                self.closeAllPopUps()
+                                self.generateMeme()
+                            }
                         }, label: {
                             Image(systemName: "square.and.arrow.up")
                                 .background(Color.clear)
