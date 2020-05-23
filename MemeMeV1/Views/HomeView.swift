@@ -77,7 +77,7 @@ struct HomeView: View {
                         .padding(.bottom, keyboardHeight)
                         .onReceive(Publishers.keyboardHeight) { self.keyboardHeight = $0 }
                 }
-                .padding(.vertical, 100)
+                .padding(.vertical, 50)
             }
             .background(RectSettings(rect: $rect))
             
